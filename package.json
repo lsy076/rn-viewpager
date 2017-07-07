@@ -1,0 +1,81 @@
+{
+  "_args": [
+    [
+      "rn-viewpager@github:magicwing/React-Native-ViewPager",
+      "C:\\Disk\\WorkSpace\\Test\\Gaotoo"
+    ]
+  ],
+  "_from": "magicwing/React-Native-ViewPager",
+  "_id": "rn-viewpager@1.1.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/rn-viewpager",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/magicwing/React-Native-ViewPager/master/package.json",
+      "gitUrl": "git://github.com/magicwing/React-Native-ViewPager.git",
+      "httpsUrl": "git+https://github.com/magicwing/React-Native-ViewPager.git",
+      "shortcut": "github:magicwing/React-Native-ViewPager",
+      "ssh": "git@github.com:magicwing/React-Native-ViewPager.git",
+      "sshUrl": "git+ssh://git@github.com/magicwing/React-Native-ViewPager.git",
+      "type": "github"
+    },
+    "name": "rn-viewpager",
+    "raw": "rn-viewpager@github:magicwing/React-Native-ViewPager",
+    "rawSpec": "github:magicwing/React-Native-ViewPager",
+    "scope": null,
+    "spec": "github:magicwing/React-Native-ViewPager",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/magicwing/React-Native-ViewPager.git#61a4a32752fb5f6b5768999f5009396d72686b1e",
+  "_shasum": "56d0b6df46ceb667481023b38e9489f9eadfde11",
+  "_shrinkwrap": null,
+  "_spec": "rn-viewpager@github:magicwing/React-Native-ViewPager",
+  "_where": "C:\\Disk\\WorkSpace\\Test\\Gaotoo",
+  "author": {
+    "name": "ZubinTang"
+  },
+  "bugs": {
+    "url": "https://github.com/zbtang/React-Native-ViewPager/issues"
+  },
+  "dependencies": {},
+  "description": "ViewPager component for react-native, same api on both android and ios.",
+  "devDependencies": {},
+  "gitHead": "61a4a32752fb5f6b5768999f5009396d72686b1e",
+  "homepage": "https://github.com/zbtang/React-Native-ViewPager#readme",
+  "keywords": [
+    "android",
+    "ios",
+    "navigator",
+    "page",
+    "pager",
+    "pageview",
+    "react-component",
+    "react-native",
+    "react-native-component",
+    "scrollable",
+    "tab",
+    "tab-bar",
+    "tab-navigator",
+    "tab-view",
+    "viewpager"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "rn-viewpager",
+  "optionalDependencies": {},
+  "readme": "# React-Native-ViewPager\r\n[![npm](https://img.shields.io/npm/v/rn-viewpager.svg?style=plastic)](https://npmjs.org/package/rn-viewpager) [![npm](https://img.shields.io/npm/dm/rn-viewpager.svg?style=plastic)](https://npmjs.org/package/rn-viewpager) [![npm](https://img.shields.io/npm/dt/rn-viewpager.svg?style=plastic)](https://npmjs.org/package/rn-viewpager)\r\n\r\nViewPager and Indicator component for react-native on both android and ios. ViewPager's props is the same as [ViewPagerAndroid](https://facebook.github.io/react-native/docs/viewpagerandroid.html#content). \r\n\r\n<p>\r\n    <img src=\"./imgs/ad.png\" width=\"1024\">\r\n</p>\r\n\r\n## Features\r\n- unify \\<ViewPagerAndroid\\> and \\<ScrollView pagingEnabled={true}\\> to \\<ViewPager\\>, add offer same props as [ViewPagerAndroid](https://facebook.github.io/react-native/docs/viewpagerandroid.html#content). \r\n- \\<IndicatorViewPager\\> component support render indicator\r\n- implement common indicator: DotIndicator, TitleIndicator and TabIndicator\r\n\r\n\r\n## Preview\r\n[download demo apk file](http://fir.im/md2u)\r\n<p>\r\n    <img src=\"./imgs/dotIndicator.gif\" width=\"256\" />\r\n    <img src=\"./imgs/titleIndicator.gif\" width=\"256\" />\r\n    <img src=\"./imgs/tabIndicator.gif\" width=\"256\" />\r\n</p>\r\n\r\n## Build and run the demo\r\n\r\n```  \r\ncd demo/\r\nnpm install\r\nreact-native run-ios\r\n```\r\n\r\n## Usage\r\n\r\n### Install from npm:\r\n`npm install --save rn-viewpager`\r\n\r\n### Integrate into your app:  \r\n\r\n```jsx  \r\n\r\nimport {StyleSheet, View, Text} from 'react-native';\r\nimport React, {Component} from 'react';\r\nimport {IndicatorViewPager, PagerTitleIndicator, PagerDotIndicator} from 'rn-viewpager';\r\n\r\nexport default class ViewPagerPage extends Component {\r\n    render() {\r\n        return (\r\n            <View style={{flex:1}}>\r\n                <IndicatorViewPager\r\n                    style={{height:200}}\r\n                    indicator={this._renderDotIndicator()}\r\n                >\r\n                    <View style={{backgroundColor:'cadetblue'}}>\r\n                        <Text>page one</Text>\r\n                    </View>\r\n                    <View style={{backgroundColor:'cornflowerblue'}}>\r\n                        <Text>page two</Text>\r\n                    </View>\r\n                    <View style={{backgroundColor:'#1AA094'}}>\r\n                        <Text>page three</Text>\r\n                    </View>\r\n                </IndicatorViewPager>\r\n\r\n                <IndicatorViewPager\r\n                    style={{flex:1,marginTop:10}}\r\n                    indicator={this._renderTitleIndicator()}\r\n                >\r\n                    <View style={{backgroundColor:'cadetblue'}}>\r\n                        <Text>page one</Text>\r\n                    </View>\r\n                    <View style={{backgroundColor:'cornflowerblue'}}>\r\n                        <Text>page two</Text>\r\n                    </View>\r\n                    <View style={{backgroundColor:'#1AA094'}}>\r\n                        <Text>page three</Text>\r\n                    </View>\r\n                </IndicatorViewPager>\r\n                \r\n                <IndicatorViewPager\r\n                    style={{flex:1,marginTop:10}}\r\n                    indicator={this._renderTabIndicator()}\r\n                >\r\n                    <View style={{backgroundColor:'cadetblue'}}>\r\n                        <Text>page one</Text>\r\n                    </View>\r\n                    <View style={{backgroundColor:'cornflowerblue'}}>\r\n                        <Text>page two</Text>\r\n                    </View>\r\n                    <View style={{backgroundColor:'#1AA094'}}>\r\n                        <Text>page three</Text>\r\n                    </View>\r\n                </IndicatorViewPager>\r\n            </View>\r\n        );\r\n    }\r\n\r\n    _renderTitleIndicator() {\r\n        return <PagerTitleIndicator titles={['one', 'two', 'three']} />;\r\n    }\r\n\r\n    _renderDotIndicator() {\r\n        return <PagerDotIndicator pageCount={3} />;\r\n    }\r\n    \r\n    _renderTabIndicator() {\r\n        let tabs = [{\r\n                text: 'Home',\r\n                iconSource: require('../imgs/ic_tab_home_normal.png'),\r\n                selectedIconSource: require('../imgs/ic_tab_home_click.png')\r\n            },{\r\n                text: 'Message',\r\n                iconSource: require('../imgs/ic_tab_task_normal.png'),\r\n                selectedIconSource: require('../imgs/ic_tab_task_click.png')\r\n            },{\r\n                text: 'Profile',\r\n                iconSource: require('../imgs/ic_tab_my_normal.png'),\r\n                selectedIconSource: require('../imgs/ic_tab_my_click.png')\r\n        }];\r\n        return <PagerTabIndicator tabs={tabs} />;\r\n    }\r\n\r\n}\r\n```\r\n\r\n## Note\r\n\r\nWhen use this lib in ListView header on android platform, please add `removeClippedSubviews={false}` prop to your ListView.\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbtang/React-Native-ViewPager.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1;"
+  },
+  "version": "1.1.3"
+}
